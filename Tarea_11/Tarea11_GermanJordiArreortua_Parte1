@@ -1,0 +1,26 @@
+# Tarea 11
+# Parte 1: Construir un programa de ejemplo sobre el uso del módulo "pickle"
+# para almacenar/recuperar información de memoria hacia/desde el disco.
+# German Jordi Arroertua Reyes
+# 26/05/2022
+
+"""
+Pickled objects can also be persistently stored
+in a disk file, using dump() function and retrieved using load() function
+"""
+
+import pickle
+# Crea un diccionario donde a cada letra mayúscula le corresponde
+# el valor de la letra en el formato ASCII
+mayusculas = dict(map(lambda x: (chr(x), x), range(65, 91)))
+
+with open('Ejemplo.txt', 'wb') as archivo:
+    pickle.dump(mayusculas, archivo)
+    archivo.close()
+
+
+with open('Ejemplo.txt', 'rb') as archivo:
+    d = pickle.load(archivo)
+    print(d)
+    archivo.close()
+    
