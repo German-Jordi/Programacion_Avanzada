@@ -132,9 +132,9 @@ def recuperar(nombre_archivo):
     en disco
     :param nombre_archivo: nombre del archivo (archivo en disco)
     """
-    with open(nombre_archivo, "rb") as archivo:
-        cargar = pickle.load(archivo)
-        archivo.close()
+    archivo = open(nombre_archivo, "rb")
+    cargar = pickle.load(archivo)
+    archivo.close()
     return cargar
 
 
