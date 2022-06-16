@@ -38,10 +38,11 @@ while True:
             archivo_writer = csv.writer(archivo)
             archivo_writer.writerow([dolar, actual])
             archivo.close()
+        actual = datetime.datetime.now()
         sleep(60 * 60 - (actual.minute * 60 + actual.second))
         actual = datetime.datetime.now()
 
     actual = datetime.datetime.now()
     if actual.hour > 16:
-        # Se espera hasta las 0 horas
         sleep(24 * 60 * 60 - (actual.hour * 60 * 60 + actual.minute * 60 + actual.second))
+        
