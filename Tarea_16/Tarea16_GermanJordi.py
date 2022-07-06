@@ -1,7 +1,7 @@
 # Tarea 16
 # Germán Jordi Arreortua Reyes
 
-"""frende de pareto"""
+"""Frente de Pareto"""
 
 import csv
 import timeit
