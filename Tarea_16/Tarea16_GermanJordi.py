@@ -45,6 +45,6 @@ print(timeit.timeit('frente_de_pareto(costos)', number=100, globals=globals()))
 
 with open('frente_de_pareto.csv', 'w', newline='') as csv_file:
     cvs_writer = csv.writer(csv_file)
-    cvs_writer.writerow(['Symbol 1', 'Symbol 2', 'APR', 'SHARPE',	'PRICE'])
+    cvs_writer.writerow(['Symbol 1', 'Symbol 2', 'APR', 'SHARPE', 'PRICE'])
     for dato in frente_de_pareto(costos):
         cvs_writer.writerow(dato)
